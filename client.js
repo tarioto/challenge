@@ -15,6 +15,7 @@ function add() {
     // Clear the input
     input.value = '';
     // TODO: refocus the element
+    document.getElementById('todo-input').focus();
 }
 
 function render(todo) {
