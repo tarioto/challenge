@@ -6,11 +6,10 @@ const list = document.getElementById('todo-list');
 function add() {
     console.warn(event);
     const input = document.getElementById('todo-input');
-
+    const todo = { title : input.value };
     // Emit the new todo as some data to the server
-    server.emit('make', {
-        title : input.value
-    });
+    server.emit('make', todo);
+    render(todo);
 
     // Clear the input
     input.value = '';
